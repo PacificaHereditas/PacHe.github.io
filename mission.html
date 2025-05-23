@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacifica Hereditas - Mission Statement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Header */
+        header {
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: padding 0.3s ease, background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            background-color: #2a2a2a;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-content img.logo {
+            max-height: 80px;
+            width: auto;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar li {
+            margin: 0 1.5rem;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #d4af37;
+            transform: scale(1.05);
+        }
+
+        .navbar a.active {
+            color: #d4af37;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        /* Parallax Banner */
+        .banner {
+            position: relative;
+            height: 400px;
+            background: url('serenelegacy.png') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed; /* Parallax effect */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            background: rgba(26, 26, 26, 0.7);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+
+        /* Mission Statement Section */
+        .mission-statement {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .mission-statement .card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #2a2a2a;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+        }
+
+        .mission-statement .card.fade-in {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .mission-statement .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .mission-statement h2 {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .mission-statement p {
+            font-size: 1.2rem;
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background-color: #d4af37;
+            margin: 2rem auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        footer li {
+            margin: 0 1rem;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #b8972f;
+        }
+
+        footer p {
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .header-content img.logo {
+                max-height: 60px;
+                margin-bottom: 1rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar li {
+                margin: 0.5rem 0;
+            }
+
+            .banner {
+                height: 300px;
+                background-attachment: scroll; /* Parallax off on mobile */
+            }
+
+            .banner h1 {
+                font-size: 2rem;
+            }
+
+            .mission-statement h2 {
+                font-size: 1.5rem;
+            }
+
+            .mission-statement p {
+                font-size: 1rem;
+            }
+
+            footer ul {
+                flex-direction: column;
+            }
+
+            footer li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="pacifica_hereditas_logo.png" alt="Pacifica Hereditas Logo" class="logo">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mission.html" class="active">Mission Statement</a></li>
+                    <li><a href="legacy.html">Legacy Preservation</a></li>
+                    <li><a href="services.html">Legacy Services</a></li>
+                    <li><a href="values.html">Values & Reflection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Parallax Banner -->
+    <section class="banner">
+        <h1>Our Mission</h1>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section class="mission-statement">
+        <div class="card">
+            <h2>Mission Statement</h2>
+            <div class="divider"></div>
+            <p>At Pacifica Hereditas, our mission is to empower families to preserve their legacy with intention and tranquility. We believe in fostering unity through shared values, ensuring that your wealth, traditions, and heritage are safeguarded for generations. With a steadfast commitment to clarity, compassion, and excellence, we guide you in creating a meaningful impact that resonates far beyond today.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission.html">Mission Statement</a></li>
+            <li><a href="legacy.html">Legacy Preservation</a></li>
+            <li><a href="services.html">Legacy Services</a></li>
+            <li><a href="values.html">Values & Reflection</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p>&copy; 2025 Pacifica Hereditas. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-In Animation on Scroll
+        function fadeInOnScroll() {
+            const elements = document.querySelectorAll('.card');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    element.classList.add('fade-in');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+    </script>
+</body>
+</html>
